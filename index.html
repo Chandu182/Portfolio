@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar with Parallax Animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-expand-sm navbar-expand-xs navbar-custom">
+        <a href="index.html"><img src="logo.jpg" alt="Logo" class="logo" style="width: 50px; height:50px"></a>
+        <div class="container-fluid">
+          <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse navbar-collapse-custom justify-content-around" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#education">Education</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact Me</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="outside-container">
+    <div class="sidebar">
+        <div class="timeline-bar"></div>
+        <a href="#home" class="timeline-item" data-target="0"><span class="fa-stack fa-2x">
+            <i class="fas fa-map-marker fa-stack-2x"></i>
+            <i class="fas fa-home fa-stack-1x fa-inverse"></i>
+        </span></a>
+        <a href="#about" class="timeline-item" data-target="1"><span class="fa-stack fa-2x">
+            <i class="fas fa-map-marker fa-stack-2x"></i>
+            <i class="fas fa-address-card fa-stack-1x fa-inverse"></i>
+        </span></a>
+        <a href="#education" class="timeline-item" data-target="2"><span class="fa-stack fa-2x">
+            <i class="fas fa-map-marker fa-stack-2x"></i>
+            <i class="fas fa-file fa-stack-1x fa-inverse"></i>
+        </span></a>
+        <a href="#Projects" class="timeline-item" data-target="3"><span class="fa-stack fa-2x">
+            <i class="fas fa-map-marker fa-stack-2x"></i>
+            <i class="fas fa-briefcase fa-stack-1x fa-inverse"></i>
+        </span></a>
+        <a href="#Skills" class="timeline-item" data-target="4"><span class="fa-stack fa-2x">
+            <i class="fas fa-map-marker fa-stack-2x"></i>
+            <i class="fas fa-cogs fa-stack-1x fa-inverse"></i>
+        </span></a>
+        <a href="#contact" class="timeline-item" data-target="5"><span class="fa-stack fa-2x">
+            <i class="fas fa-map-marker fa-stack-2x"></i>
+            <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+        </span></a>
+        <div class="plane" id="plane"><i class="fa-solid fa-plane"></i></div>
+    </div>
+    <div class="content">
+        <section id="home" class="section home">
+            <div class="intro-container">
+                <div class="intro-text">
+                    <h1>Welcome to My Portfolio 🌙</h1>
+                    <p>I’m <strong>Thumma Chandra Kiran Reddy</strong>, a passionate <strong>Webdeveloper</strong> with a knack for <strong>Web technologies</strong>. 
+                       Whether it’s crafting elegant designs, solving complex problems, or telling compelling stories, 
+                       I bring creativity and dedication to every project. Explore my work below or let’s connect!</p>
+                </div>
+                <div class="buttons">
+                    <a href="Resume.pdf" class="btn" target="_blank">Resume</a>
+                    <a href="#hire-me" class="btn">Hire Me</a>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="section about">
+            <div class="about-card">
+                <div class="card-header">
+                    <img src="profile-1.jpg" alt="Your Name" class="profile-img">
+                    <h2 class="name"><span>Thumma</span> Chandra Kiran Reddy</h2>
+                </div>
+                <div class="card-body">
+                    <p class="description">
+                        I am a highly motivated and passionate Web Developer Intern with a strong foundation in web technologies
+                        and a keen eye for detail. Proficient in HTML, CSS, JavaScript, and familiar with modern frameworks
+                        such as React and Next.js. Demonstrates a strong understanding of responsive design principles, user
+                        experience, and performance optimization. Enthusiastic about learning new technologies and applying
+                        creative solutions to real-world problems. Excellent problem-solving skills, teamwork, and a
+                        commitment to delivering high-quality work. Ready to contribute to dynamic projects and grow within
+                        a collaborative team environment.
+                    </p>
+                    <p class="links">
+                        <a href="https://www.linkedin.com/in/thumma-chandra-kiran" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://github.com/Chandu182" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    </p>
+                    <p class="contributions">
+                        <i class="fas fa-code-branch"></i> GitHub Contributions: 34 commits, 1 repositories
+                    </p>
+                </div>
+            </div>            
+        </section>
+        <section id="education" class="section education">
+            <div class="education-header">
+                <h2 class="title">Education</h2>
+            </div>
+            <div class="timeline-container-1">
+                <div class="timeline-1">
+                  <div class="timeline-item-1 left">
+                    <div class="timeline-content-1">
+                      <span class="date">2020 - 2024</span>
+                      <h3>CGPA: 7.02</h3>
+                      <p style="font-size: 18px; font-weight:600">Sir C.R.Reddy College Of Engineering,<h5 style="font-size: 16px;">Eluru</h5></p>
+                      <p style="font-size: 18px;">Bachelors Of Technology, in <br>
+                        <h4 style="font-size: 15px; font-weight:600;">Electronics And Communication Engineering</h4></p>
+                    </div>
+                  </div>
+                  <div class="timeline-item-1 right">
+                    <div class="timeline-content-1">
+                      <span class="date">2018 - 2020</span>
+                       <h3>CGPA: 9.2</h3>
+                      <p style="font-size: 18px; font-weight:600">Narayana Junior College,<h5 style="font-size: 16px;">Vijayawada</h5></p>
+                      <p>Grade-11 & Grade-12 <br>
+                        <h4 style="font-size: 16px; font-weight:600;">M.P.C</h4></p>
+                    </div>
+                  </div>
+                  <div class="timeline-item-1 left">
+                    <div class="timeline-content-1">
+                      <span class="date">2017 - 2018</span>
+                      <h3>CGPA: 9.8</h3>
+                      <p style="font-size: 18px; font-weight:600">Viswabharathi E.M High School,<h5 style="font-size: 16px;">Gudivada</h5></p>
+                      <p>Grade-10  </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </section>
+        <section id="Projects" class="section Projects">
+            <div class="projects">
+                <div class="project-header">
+                    <h2>My Projects</h2>
+                </div>
+                <div class="projects-slider">
+                    <div class="project-card">
+                        <a href="https://qtripstatick.netlify.app/" target="_blank">
+                            <img src="project-1.png" alt="Project 1">
+                            <h3>QTrip Static</h3>
+                            <p><b>QTrip Static</b> is a responsive and accessible website crafted with HTML, CSS, and Bootstrap. It ensures seamless performance across all devices while adhering to accessibility standards, making it easy to navigate for everyone. Ideal for showcasing content with a modern, user-friendly design.</p>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a href="https://kaleidoscopic-starship-1a9f9d.netlify.app" target="_blank">
+                            <img src="project-2.png" alt="Project 2">
+                            <h3>Rock paper Scissor Game</h3>
+                            <p>The <b>Rock Paper Scissors</b> game is a responsive, interactive web application built with HTML, CSS, and JavaScript. It offers a smooth user experience across all devices, combining classic gameplay with modern, intuitive design. Perfect for quick fun with a sleek, responsive interface.</p>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a href="https://thre3columnpreviewcard.netlify.app/" target="_blank">
+                            <img src="project-3.png" alt="Project 3">
+                            <h3>Three Card Preview Blog</h3>
+                            <p>The <b>Three Card Preview Blog</b> is a responsive comparison layout designed with HTML and CSS, showcasing Sedans, Luxury cars, and SUVs side by side. It offers a clear, concise comparison with visually appealing cards, making it easy to compare features and benefits across different vehicle types on any device.</p>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a href="https://storied-cajeta-9647a3.netlify.app" target="_blank">
+                            <img src="project-4.png" alt="Project 4">
+                            <h3>Blog Card</h3>
+                            <p>The <b>Blog Card</b> is a responsive, visually engaging design created with HTML and CSS to highlight the publication of a book. It provides a concise yet captivating overview, drawing readers in with a sleek layout that's optimized for readability across all devices. Ideal for sharing book updates or announcements in a modern, attractive format.</p>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a href="https://basicregistrationform1.netlify.app/" target="_blank">
+                            <img src="project-5.png" alt="Project 5">
+                            <h3>Project 5</h3>
+                            <p>Description of Project 3.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="prev-slide"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="next-slide"><i class="fa-solid fa-arrow-right"></i></button>
+        </section>
+        <section id="Skills" class="section skills">
+            <div class="timeline-container-2">
+                <div class="timeline-header-1">
+                    <h2>Skills</h2>
+                </div>
+                <div class="timeline-2">
+                    <div class="timeline-item-2">
+                     <div class="note">
+                        <p>Skill 1:</p>
+                            <span>Basic HTML and CSS</span>
+                    </div>
+                </div>
+                <div class="timeline-item-2">
+                    <div class="note">
+                         <p>Skill 2:</p>
+                         <span>JavaScript and jQuery*</span>
+                    </div>
+                </div>
+                <div class="timeline-item-2">
+                    <div class="note">
+                        <p>Skill 3:</p>
+                        <span>React.js*</span>
+                     </div>
+                 </div>
+                <div class="timeline-item-2">
+                    <div class="note">
+                        <p>Skill 4</p>
+                        <span>Node.js* and Express*</span>
+                    </div>
+                </div>
+                 <div class="timeline-item-2">
+                    <div class="note">
+                        <p>Skill 5:</p>
+                        <span>Project Management</span>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-3">
+                <div class="timeline-item-3">
+                    <div class="note">
+                         <p>Skill 6:</p>
+                        <span>Cloud Deployment</span>
+                    </div>
+                </div>
+                <div class="timeline-item-3">
+                    <div class="note">
+                        <p>Skill 7:</p>
+                            <span>Bootstrap</span>
+                        </div>
+                </div>
+                <div class="timeline-item-3">
+                    <div class="note">
+                         <p>Skill 8:</p>
+                         <span>Git</span>
+                    </div>
+                </div>
+                <div class="timeline-item-3">
+                    <div class="note">
+                        <p>Skill 9:</p>
+                        <span>Python</span>
+                     </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="section contact">
+            <div class="contact-container">
+                <h2>Contact Me</h2>
+                <div class="contact-details">
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> Email: thumma.chandrakiranreddy@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> Phone: +91 8688140755</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Location: Hyderabad, India</p>
+                    </div>
+                    <div class="contact-form">
+                        <form action="form.php" method="post">
+                            <label for="name"> Name:</label>
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <label for="email"> Email:</label>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <label for="message">Message:</label>
+                            <textarea name="message" placeholder="Your Message" required></textarea>
+                            <button type="submit" >Submit form</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="social-media">
+                    <a href="https://x.com/chandra_thumma" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/thumma-chandra-kiran" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/chandu182" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        
+    </section>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
