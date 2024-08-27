@@ -968,7 +968,7 @@ button i{
     width: 100%;
 }
 }
-@media(max-width:375px){
+@media(max-width:525px){
     *{
         box-sizing: border-box;
         padding: 0;
