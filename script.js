@@ -50,50 +50,37 @@ nextButton.addEventListener('click', () => {
 
 // Initialize the first slide
 updateSlide();
-  const form = document.getElementById('contactForm');
-  const responseMessage = document.getElementById('responseMessage');
+  const form = document.getElementById("contact-form");
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-    const payload = {
-      name: document.getElementById('name').value,
-      email: document.getElementById('email').value,
-      message: document.getElementById('message').value,
-    };
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
 
-    try {
-      const response = await fetch("https://bc1fxeu4rg.execute-api.ap-south-1.amazonaws.com/prod/send", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({
-    name: nameInput.value,
-    email: emailInput.value,
-    message: messageInput.value
-  })
-})
-.then(response => {
-  if (response.ok) {
-    alert("Message sent successfully!");
-  } else {
-    alert("Error sending message.");
-  }
-})
-.catch(error => {
-  console.error("Error:", error);
-  alert("Something went wrong!");
-});
+      if (!name || !email || !message) {
+        alert("Please fill in all fields.");
+        return;
+      }
 
-      const result = await response.json();
-      responseMessage.textContent = result.message || "Message sent!";
-      responseMessage.style.color = "green";
-    } catch (err) {
-      responseMessage.textContent = "Failed to send message.";
-      responseMessage.style.color = "red";
-    }
-  });
-
-
-
+      fetch("https://bc1fxeu4rg.execute-api.ap-south-1.amazonaws.com/prod/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ name, email, message })
+      })
+      .then(response => {
+        if (response.ok) {
+          alert("Message sent successfully!");
+          form.reset();
+        } else {
+          alert("Failed to send message. Please try again.");
+        }
+      })
+      .catch(error => {
+        console.error("Error:", error);
+        alert("Something went wrong. Please try again later.");
+      });
+    });
