@@ -50,3 +50,33 @@ nextButton.addEventListener('click', () => {
 
 // Initialize the first slide
 updateSlide();
+<script>
+  const form = document.getElementById('contactForm');
+  const responseMessage = document.getElementById('responseMessage');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const payload = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      message: document.getElementById('message').value,
+    };
+
+    try {
+      const response = await fetch('https://bc1fxeu4rg.execute-api.ap-south-1.amazonaws.com/prod', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+      responseMessage.textContent = result.message || "Message sent!";
+      responseMessage.style.color = "green";
+    } catch (err) {
+      responseMessage.textContent = "Failed to send message.";
+      responseMessage.style.color = "red";
+    }
+  });
+</script>
+
