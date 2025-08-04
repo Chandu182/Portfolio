@@ -50,7 +50,6 @@ nextButton.addEventListener('click', () => {
 
 // Initialize the first slide
 updateSlide();
-<script>
   const form = document.getElementById('contactForm');
   const responseMessage = document.getElementById('responseMessage');
 
@@ -95,6 +94,6 @@ updateSlide();
       responseMessage.style.color = "red";
     }
   });
-</script>
+
 
 
