@@ -64,11 +64,28 @@ updateSlide();
     };
 
     try {
-      const response = await fetch('https://bc1fxeu4rg.execute-api.ap-south-1.amazonaws.com/prod', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
+      const response = await fetch("https://bc1fxeu4rg.execute-api.ap-south-1.amazonaws.com/prod/send", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    name: nameInput.value,
+    email: emailInput.value,
+    message: messageInput.value
+  })
+})
+.then(response => {
+  if (response.ok) {
+    alert("Message sent successfully!");
+  } else {
+    alert("Error sending message.");
+  }
+})
+.catch(error => {
+  console.error("Error:", error);
+  alert("Something went wrong!");
+});
 
       const result = await response.json();
       responseMessage.textContent = result.message || "Message sent!";
@@ -79,4 +96,5 @@ updateSlide();
     }
   });
 </script>
+
 
